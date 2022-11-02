@@ -8,7 +8,8 @@ addEventListener("DOMContentLoaded",(e)=>{
            body: JSON.stringify(data)
        };
        let peticion = await fetch(myForm.action,config);
-       let res = await peticion.json();
-       document.querySelector("#res").innerHTML = res.mensaje;
+       let res = await peticion.text();
+       document.querySelector("#res").insertAdjacentHTML("beforeend",res);
+
     })
 })

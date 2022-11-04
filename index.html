@@ -10,25 +10,25 @@
 </head>
 <body>
     <div class="main">
-        <div class="galeria">
-            <h2>Codigos:</h2>
-            <div>
-                <ul>
-                    <li>Pantalon: 10 <br>
-                        precio: 2000 </li> <br>
-                    <li>Camisa: 20 <br>
-                        precio: 1000</li> <br>
-                    <li>Medias: 30 <br> 
-                        precio: 600</li>
-                </ul>
-            </div>
-        </div>
-        <form class="form" id="Formulario" action="api.php" method="post">
-            <label>Ingrese el codigo del producto:</label>
-            <input type="number" name="codigo">
-            <label>Ingrese la cantidad:</label>
-            <input type="number" name="unidades">
-            <input type="submit" value="Comprar">
+        <form class="form" id="form" action="api.php" method="post">
+            <label>Ingrese la cantidad de alumnos:</label>
+            <input id="cantidad" type="number"  name="cantidad">
+            <label>seleccione su sexo:</label>
+            <select name="genero" id="genero">
+                <option value=""></option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+              </select>
+              <label>Edad del alumno:</label>
+            <input id="edad" type="number" name="edad">
+              <label>Carrera</label>
+              <select name="carrera" id="carrera">
+                <option value="" ></option>
+                <option value="a">A</option>
+                <option value="b">B</option>
+                <option value="c">C</option>
+              </select>
+            <input type="submit">
         </form>
         
         <p id="res" class="res">
